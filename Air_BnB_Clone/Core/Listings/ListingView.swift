@@ -10,11 +10,7 @@ import SwiftUI
 struct ListingView: View {
     var body: some View {
         VStack{
-            TabView{
-                ForEach(0...3,id:\.self){ image in
-                    Rectangle()
-                }
-            }
+            listingCarosalView()
                 .frame(height: 320)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
                 .tabViewStyle(.page)
@@ -22,7 +18,7 @@ struct ListingView: View {
             HStack(alignment:.top){
                 VStack(alignment:.leading){
                     Text("Miami , Florida")
-                    
+                        .foregroundStyle(.black)
                     Text("15 mi away")
                         .foregroundStyle(.gray)
                     
@@ -34,6 +30,7 @@ struct ListingView: View {
                     +
                     Text("night")
                 }.font(.system(size: 15))
+                    .foregroundStyle(.black)
                 
                 Spacer()
                 
@@ -41,10 +38,10 @@ struct ListingView: View {
                     Image(systemName: "star.fill")
                     
                     Text("4.98")
-                }
+                }.foregroundStyle(.black)
             }
         }
-        .padding()
+        
         
     }
 }

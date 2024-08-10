@@ -14,11 +14,19 @@ struct ExploreView: View {
                 Search_FilterBar()
                 LazyVStack(spacing:30){
                     ForEach(0 ... 10 , id: \.self){listing in
-                        ListingView()
+                        NavigationLink(value: listing) {
+                            ListingView()
+                                .frame(height: 400)
+                                .clipShape(RoundedRectangle(cornerRadius: 15))
+                        }
                     }
-                    .frame(height: 400)
-                    .clipShape(RoundedRectangle(cornerRadius: 15))
                 }
+                //.padding()
+            }
+            .padding()
+            .navigationDestination(for: Int.self) {listing in
+                listingDetailView()
+                    .navigationBarBackButtonHidden(true)
             }
         }
     }
