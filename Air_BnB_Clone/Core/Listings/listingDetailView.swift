@@ -156,6 +156,7 @@ struct listingDetailView: View {
                     .padding()
             }
             .padding()
+            .padding(.bottom,30)
         }
         .padding(.bottom,65)
         .overlay(alignment:.bottom){
@@ -176,7 +177,7 @@ struct listingDetailView: View {
                     }
                     Spacer()
                     Button(action: {
-                        
+                        // can book the hpuse or take to payment page
                     }, label: {
                         Text("Reserve")
                             .foregroundStyle(.white)
