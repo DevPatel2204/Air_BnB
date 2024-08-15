@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct Air_BnB_CloneApp: App {
+struct Air_BnB: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
