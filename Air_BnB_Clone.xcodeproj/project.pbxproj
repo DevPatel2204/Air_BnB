@@ -10,7 +10,7 @@
 		2F3460452C652CBA0048BECD /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3460442C652CBA0048BECD /* ExploreView.swift */; };
 		2F3460472C652E0F0048BECD /* ListingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3460462C652E0F0048BECD /* ListingView.swift */; };
 		2F3460492C6536570048BECD /* Search_FilterBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3460482C6536570048BECD /* Search_FilterBar.swift */; };
-		2FB0C4D62C6520AB005D4F99 /* Air_BnB_CloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB0C4D52C6520AB005D4F99 /* Air_BnB_CloneApp.swift */; };
+		2FB0C4D62C6520AB005D4F99 /* Air_BnB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB0C4D52C6520AB005D4F99 /* Air_BnB.swift */; };
 		2FB0C4D82C6520AB005D4F99 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB0C4D72C6520AB005D4F99 /* ContentView.swift */; };
 		2FB0C4DA2C6520AC005D4F99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FB0C4D92C6520AC005D4F99 /* Assets.xcassets */; };
 		2FB0C4DD2C6520AC005D4F99 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FB0C4DC2C6520AC005D4F99 /* Preview Assets.xcassets */; };
@@ -20,6 +20,10 @@
 		2FF80E342C67663A00400280 /* nameDetailsReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF80E332C67663A00400280 /* nameDetailsReview.swift */; };
 		D747D1CD2C6BB18200F5574A /* loginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D747D1CC2C6BB18200F5574A /* loginPage.swift */; };
 		D747D1CF2C6BC35200F5574A /* signUppage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D747D1CE2C6BC35200F5574A /* signUppage.swift */; };
+		D758239F2C6D3CD300DCB7BB /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D758239E2C6D3CD300DCB7BB /* FirebaseAuth */; };
+		D75823A12C6D3CD300DCB7BB /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = D75823A02C6D3CD300DCB7BB /* FirebaseDatabase */; };
+		D75823A32C6D3CD300DCB7BB /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = D75823A22C6D3CD300DCB7BB /* FirebaseFirestore */; };
+		D75823A52C6D3D9400DCB7BB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D75823A42C6D3D9400DCB7BB /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +31,7 @@
 		2F3460462C652E0F0048BECD /* ListingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingView.swift; sourceTree = "<group>"; };
 		2F3460482C6536570048BECD /* Search_FilterBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search_FilterBar.swift; sourceTree = "<group>"; };
 		2FB0C4D22C6520AB005D4F99 /* Air_BnB_Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Air_BnB_Clone.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2FB0C4D52C6520AB005D4F99 /* Air_BnB_CloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Air_BnB_CloneApp.swift; sourceTree = "<group>"; };
+		2FB0C4D52C6520AB005D4F99 /* Air_BnB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Air_BnB.swift; sourceTree = "<group>"; };
 		2FB0C4D72C6520AB005D4F99 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2FB0C4D92C6520AC005D4F99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2FB0C4DC2C6520AC005D4F99 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -37,6 +41,7 @@
 		2FF80E332C67663A00400280 /* nameDetailsReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nameDetailsReview.swift; sourceTree = "<group>"; };
 		D747D1CC2C6BB18200F5574A /* loginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginPage.swift; sourceTree = "<group>"; };
 		D747D1CE2C6BC35200F5574A /* signUppage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUppage.swift; sourceTree = "<group>"; };
+		D75823A42C6D3D9400DCB7BB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +49,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D75823A12C6D3CD300DCB7BB /* FirebaseDatabase in Frameworks */,
+				D758239F2C6D3CD300DCB7BB /* FirebaseAuth in Frameworks */,
+				D75823A32C6D3CD300DCB7BB /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,9 +180,10 @@
 				2F34603C2C652B750048BECD /* Extensions */,
 				2F34603A2C652B680048BECD /* Models */,
 				2F34603B2C652B700048BECD /* Utils */,
-				2FB0C4D52C6520AB005D4F99 /* Air_BnB_CloneApp.swift */,
+				2FB0C4D52C6520AB005D4F99 /* Air_BnB.swift */,
 				2FB0C4D72C6520AB005D4F99 /* ContentView.swift */,
 				2FB0C4D92C6520AC005D4F99 /* Assets.xcassets */,
+				D75823A42C6D3D9400DCB7BB /* GoogleService-Info.plist */,
 				2FB0C4DB2C6520AC005D4F99 /* Preview Content */,
 			);
 			path = Air_BnB_Clone;
@@ -222,6 +231,11 @@
 			dependencies = (
 			);
 			name = Air_BnB_Clone;
+			packageProductDependencies = (
+				D758239E2C6D3CD300DCB7BB /* FirebaseAuth */,
+				D75823A02C6D3CD300DCB7BB /* FirebaseDatabase */,
+				D75823A22C6D3CD300DCB7BB /* FirebaseFirestore */,
+			);
 			productName = Air_BnB_Clone;
 			productReference = 2FB0C4D22C6520AB005D4F99 /* Air_BnB_Clone.app */;
 			productType = "com.apple.product-type.application";
@@ -250,6 +264,9 @@
 				Base,
 			);
 			mainGroup = 2FB0C4C92C6520AB005D4F99;
+			packageReferences = (
+				D758239D2C6D3CD300DCB7BB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 2FB0C4D32C6520AB005D4F99 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -266,6 +283,7 @@
 			files = (
 				2FB0C4DD2C6520AC005D4F99 /* Preview Assets.xcassets in Resources */,
 				2FB0C4DA2C6520AC005D4F99 /* Assets.xcassets in Resources */,
+				D75823A52C6D3D9400DCB7BB /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +302,7 @@
 				2F3460492C6536570048BECD /* Search_FilterBar.swift in Sources */,
 				D747D1CF2C6BC35200F5574A /* signUppage.swift in Sources */,
 				2F3460452C652CBA0048BECD /* ExploreView.swift in Sources */,
-				2FB0C4D62C6520AB005D4F99 /* Air_BnB_CloneApp.swift in Sources */,
+				2FB0C4D62C6520AB005D4F99 /* Air_BnB.swift in Sources */,
 				2FF80E322C67614E00400280 /* listingCarosalView.swift in Sources */,
 				2FB642E82C687D830091F413 /* DestinationView.swift in Sources */,
 			);
@@ -490,6 +508,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D758239D2C6D3CD300DCB7BB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D758239E2C6D3CD300DCB7BB /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D758239D2C6D3CD300DCB7BB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		D75823A02C6D3CD300DCB7BB /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D758239D2C6D3CD300DCB7BB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		D75823A22C6D3CD300DCB7BB /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D758239D2C6D3CD300DCB7BB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2FB0C4CA2C6520AB005D4F99 /* Project object */;
 }
