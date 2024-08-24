@@ -21,6 +21,8 @@
 		D7005B2F2C791FBD00B15C41 /* rowOptional.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7005B2E2C791FBD00B15C41 /* rowOptional.swift */; };
 		D7005B312C79212C00B15C41 /* WishlistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7005B302C79212C00B15C41 /* WishlistView.swift */; };
 		D7005B332C79230500B15C41 /* MainBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7005B322C79230500B15C41 /* MainBarView.swift */; };
+		D733320A2C79CFAA008F2468 /* Listing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73332092C79CFAA008F2468 /* Listing.swift */; };
+		D733320C2C79DF4E008F2468 /* DeveloperPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D733320B2C79DF4E008F2468 /* DeveloperPreview.swift */; };
 		D747D1CD2C6BB18200F5574A /* loginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D747D1CC2C6BB18200F5574A /* loginPage.swift */; };
 		D747D1CF2C6BC35200F5574A /* signUppage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D747D1CE2C6BC35200F5574A /* signUppage.swift */; };
 		D75823A52C6D3D9400DCB7BB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D75823A42C6D3D9400DCB7BB /* GoogleService-Info.plist */; };
@@ -47,6 +49,8 @@
 		D7005B2E2C791FBD00B15C41 /* rowOptional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rowOptional.swift; sourceTree = "<group>"; };
 		D7005B302C79212C00B15C41 /* WishlistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistView.swift; sourceTree = "<group>"; };
 		D7005B322C79230500B15C41 /* MainBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBarView.swift; sourceTree = "<group>"; };
+		D73332092C79CFAA008F2468 /* Listing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listing.swift; sourceTree = "<group>"; };
+		D733320B2C79DF4E008F2468 /* DeveloperPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperPreview.swift; sourceTree = "<group>"; };
 		D747D1CC2C6BB18200F5574A /* loginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginPage.swift; sourceTree = "<group>"; };
 		D747D1CE2C6BC35200F5574A /* signUppage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUppage.swift; sourceTree = "<group>"; };
 		D75823A42C6D3D9400DCB7BB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -108,8 +112,9 @@
 		2F34603C2C652B750048BECD /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				D733320B2C79DF4E008F2468 /* DeveloperPreview.swift */,
 			);
-			path = Extensions;
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		2F34603D2C652BBC0048BECD /* Explore */ = {
@@ -125,8 +130,8 @@
 		2F34603E2C652BC20048BECD /* Listings */ = {
 			isa = PBXGroup;
 			children = (
-				2F3460462C652E0F0048BECD /* ListingView.swift */,
-				2FF80E2E2C675FDD00400280 /* listingDetailView.swift */,
+				D73332072C79CF38008F2468 /* Models */,
+				D73332082C79CF3F008F2468 /* VIew */,
 			);
 			path = Listings;
 			sourceTree = "<group>";
@@ -220,6 +225,23 @@
 			path = componets;
 			sourceTree = "<group>";
 		};
+		D73332072C79CF38008F2468 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D73332092C79CFAA008F2468 /* Listing.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D73332082C79CF3F008F2468 /* VIew */ = {
+			isa = PBXGroup;
+			children = (
+				2F3460462C652E0F0048BECD /* ListingView.swift */,
+				2FF80E2E2C675FDD00400280 /* listingDetailView.swift */,
+			);
+			path = VIew;
+			sourceTree = "<group>";
+		};
 		D747D1CB2C6BB14D00F5574A /* credentials */ = {
 			isa = PBXGroup;
 			children = (
@@ -311,9 +333,11 @@
 			files = (
 				2FF80E2F2C675FDD00400280 /* listingDetailView.swift in Sources */,
 				D7005B312C79212C00B15C41 /* WishlistView.swift in Sources */,
+				D733320A2C79CFAA008F2468 /* Listing.swift in Sources */,
 				2FB0C4D82C6520AB005D4F99 /* ContentView.swift in Sources */,
 				D747D1CD2C6BB18200F5574A /* loginPage.swift in Sources */,
 				2F3460472C652E0F0048BECD /* ListingView.swift in Sources */,
+				D733320C2C79DF4E008F2468 /* DeveloperPreview.swift in Sources */,
 				D7DCB9B42C791CF50033D8E9 /* ProfileView.swift in Sources */,
 				2FF80E342C67663A00400280 /* nameDetailsReview.swift in Sources */,
 				2F3460492C6536570048BECD /* Search_FilterBar.swift in Sources */,
