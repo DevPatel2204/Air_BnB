@@ -6,11 +6,19 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct ContentView: View {
+//    Use @StateObject to observe the view model
+    @StateObject var authViewModel = AuthViewModel()
+
     var body: some View {
-        VStack {
-            MainBarView()
+        if let _ = authViewModel.user {
+            // Show ExploreView if the user is signed in
+            ExploreView()
+        } else {
+            // Show loginPage if the user is not signed in
+            loginPage()
         }
     }
 }

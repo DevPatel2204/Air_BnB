@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>API_KEY</key>
-	<string>AIzaSyCmShMa9Qz_ekVWCw6Lwg2X-VAS5BsSJhg</string>
+	<string>AIzaSyC3BZx1HvQ0QQ6cHHvo2LttWlBBOAZrSqk</string>
 	<key>GCM_SENDER_ID</key>
 	<string>671093673751</string>
 	<key>PLIST_VERSION</key>
@@ -15,15 +15,15 @@
 	<key>STORAGE_BUCKET</key>
 	<string>airbnb-6b6d9.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_GCM_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:671093673751:ios:193c9dd9c2d3921e193152</string>
 </dict>

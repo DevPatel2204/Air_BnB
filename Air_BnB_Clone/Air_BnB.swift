@@ -6,8 +6,7 @@
 //
 
 import SwiftUI
-import FirebaseCore
-
+import Firebase
 
 //class AppDelegate: NSObject, UIApplicationDelegate {
 //  func application(_ application: UIApplication,
@@ -20,13 +19,12 @@ import FirebaseCore
 
 @main
 struct Air_BnB: App {
-    //@UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     init(){
         FirebaseApp.configure()
     }
     var body: some Scene {
         WindowGroup {
-            ExploreView()
+            ContentView()
         }
     }
 }

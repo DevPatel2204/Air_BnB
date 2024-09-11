@@ -14,6 +14,7 @@ struct ListingView: View {
                 .frame(height: 320)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
                 .tabViewStyle(.page)
+//                .padding()
             
             HStack(alignment:.top){
                 VStack(alignment:.leading){
@@ -40,8 +41,9 @@ struct ListingView: View {
                     Text("4.98")
                 }.foregroundStyle(.black)
             }
+            
         }
-        
+        .padding()
         
     }
 }

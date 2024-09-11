@@ -6,10 +6,15 @@
 //
 
 import SwiftUI
+import FirebaseAuth
+import Firebase
+
 
 struct loginPage: View {
     @State private var email:String = ""
     @State private var password = ""
+    @State private var errorMessage = ""
+    @State private var isSignedIn = false
     var body: some View {
         NavigationStack{
             ZStack{
@@ -27,11 +32,12 @@ struct loginPage: View {
                     VStack{
                         VStack {
                             TextField("",
-                                text: $email,
-                                prompt:Text("E-Mail")
-                                    .foregroundColor(.gray)
-                                    .font(.system(size: 16, weight: .light, design: .rounded))
+                                      text: $email,
+                                      prompt:Text("E-Mail")
+                                .foregroundColor(.gray)
+                                .font(.system(size: 16, weight: .light, design: .rounded))
                             )
+                            .textInputAutocapitalization(.never)
                             .padding()
                             .background(Color(.systemGray6))
                             .cornerRadius(8)
@@ -40,20 +46,20 @@ struct loginPage: View {
                             .padding(.bottom)
                             
                             SecureField("",
-                                text: $password,
-                                prompt:Text("Password")
-                                    .foregroundColor(.gray)
-                                    .font(.system(size: 16, weight: .light, design: .rounded))
+                                        text: $password,
+                                        prompt:Text("Password")
+                                .foregroundColor(.gray)
+                                .font(.system(size: 16, weight: .light, design: .rounded))
                             )
                             .padding()
                             .background(Color(.systemGray6))
                             .cornerRadius(8)
                             .padding(.horizontal)
                         }.padding(.vertical,50)
-                            
-                
+                        
+                        
                         Button(action: {
-                            // Click to Login
+                            signIn()
                         }, label: {
                             Text("Login")
                         })
@@ -69,16 +75,42 @@ struct loginPage: View {
                                 .foregroundStyle(.white)
                                 .padding(.top)
                         }
-//
+                        if !errorMessage.isEmpty {
+                            Text(errorMessage)
+                                .foregroundColor(.black)
+                                .padding()
+                        }
+                        
+                        if isSignedIn {
+                            Text("Signed in successfully!")
+                                .foregroundColor(.green)
+                                .padding()
+                        }
                     }
                 }
+                
                 
             }.ignoresSafeArea()
                 .navigationBarBackButtonHidden(true)
         }
+        
     }
+    
+    func signIn() {
+        Auth.auth().signIn(withEmail: email, password: password) { result, error in
+            if let error = error {
+                errorMessage = error.localizedDescription
+                print(error)
+            } else {
+                isSignedIn = true
+            }
+        }
+    }
+
 }
 
 #Preview {
     loginPage()
 }
+
+

@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct signUppage: View {
     @State private var email = ""
     @State private var password = ""
     @State private var name = ""
     @State private var number:String = ""
+    @State private var errorMessage = ""
+    @State private var signuped = false
     
     var body: some View {
         NavigationStack {
@@ -59,6 +62,7 @@ struct signUppage: View {
                                     .foregroundColor(.gray)
                                     .font(.system(size: 16, weight: .light, design: .rounded))
                             )
+                            .textInputAutocapitalization(.never)
                             .padding()
                             .background(Color(.systemGray6))
                             .cornerRadius(8)
@@ -79,9 +83,8 @@ struct signUppage: View {
                             .padding(.horizontal)
                         }.padding(.vertical,50)
                         
-                        
                         Button(action: {
-                            // Click to SignUp
+                            signUp()
                         }, label: {
                             Text("Sign Up")
                         })
@@ -98,39 +101,40 @@ struct signUppage: View {
                                 .foregroundStyle(.white)
                                 .padding(.top)
                         }
+                        if !errorMessage.isEmpty {
+                            Text(errorMessage)
+                                .foregroundColor(.red)
+                                .padding()
+                        }
+                        if signuped {
+                            Text("Successfully signed up!")
+                                .foregroundStyle(.green)
+                        }
+                        
                     }
                 }
                 
             }.ignoresSafeArea()
                 .navigationBarBackButtonHidden(true)
         }
+        
     }
+    func signUp() {
+        Auth.auth().createUser(withEmail: email, password: password) { result, error in
+            if let error = error {
+                print(error)
+                errorMessage = error.localizedDescription
+            } else {
+                signuped = true
+                //errorMessage = "Successfully signed up!"
+            }
+        }
+    }
+    
 }
 
 #Preview {
     signUppage()
 }
 
-//struct login:View {
-//    let user_name = ""
-//    let user_mail = ""
-//    let user_details = ""
-//    //let user_pass = ""
-//    //let user_number = ""
-//    var body: some View {
-//        TextField(
-//            "",
-//            text: ,
-//            prompt:Text("E-Mail")
-//                .foregroundColor(.gray)
-//                .font(.system(size: 16, weight: .light, design: .rounded))
-//        )
-//        .padding()
-//        .background(Color(.systemGray6))
-//        .cornerRadius(8)
-//        .padding(.horizontal)
-//        
-//        .padding(.bottom)
-//        
-//    }
-//}
+
